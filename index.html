@@ -4,16 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    #quoteDisplay {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 5px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    #quoteFormContainer {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    #quoteFormContainer input {
+      margin: 0.3rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    #quoteFormContainer button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #newQuote, #exportBtn {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #importFile {
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Dynamic Quote Generator</h1>
 
+  <!-- Container for displaying quotes -->
   <div id="quoteDisplay"></div>
 
+  <!-- Button to show a new random quote -->
   <button id="newQuote">Show New Quote</button>
 
+  <!-- Container where the Add Quote form will be dynamically generated -->
   <div id="quoteFormContainer"></div>
 
+  <!-- Export quotes button -->
+  <button id="exportBtn">Export Quotes</button>
+
+  <!-- Import quotes JSON file -->
+  <input type="file" id="importFile" accept=".json" />
+
+  <!-- JavaScript -->
   <script src="script.js"></script>
+  
 </body>
 </html>
